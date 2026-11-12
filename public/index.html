@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SocketSpace Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="chat-shell">
+      <header>
+        <div>
+          <p class="eyebrow">REALTIME CHAT</p>
+          <h1>SocketSpace</h1>
+        </div>
+        <span id="status" class="status offline">Connecting...</span>
+      </header>
+
+      <section id="messages" class="messages" aria-live="polite">
+        <p class="empty-state">Join the chat to start talking.</p>
+      </section>
+
+      <form id="message-form" class="composer">
+        <input id="message-input" maxlength="500" placeholder="Write a message..." autocomplete="off" disabled />
+        <button type="submit" disabled>Send</button>
+      </form>
+    </main>
+
+    <dialog id="name-dialog" open>
+      <form id="name-form" method="dialog">
+        <p class="eyebrow">WELCOME</p>
+        <h2>Choose a display name</h2>
+        <input id="name-input" maxlength="24" placeholder="Your name" required autocomplete="nickname" />
+        <button type="submit">Join chat</button>
+      </form>
+    </dialog>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
